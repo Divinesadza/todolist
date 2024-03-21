@@ -1,6 +1,7 @@
 package com.example.todolist.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -12,7 +13,8 @@ public class StudentController {
 
     private StudentService service ;
 
-    public StudentController(StudentService service) {
+    public StudentController(
+            @Qualifier("db") StudentService service) {
         this.service = service;
     }
 

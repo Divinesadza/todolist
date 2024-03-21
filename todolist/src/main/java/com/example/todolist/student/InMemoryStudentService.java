@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.time.LocalDate;
 import java.util.List;
 
-@Service
+@Service("im")
 public class InMemoryStudentService implements StudentService{
 
 
